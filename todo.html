@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple To-Do List</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <h2>To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Add new task">
+  <button id="addBtn">Add</button>
+  <ul id="taskList"></ul>
+ <li><strong>Task 1:</strong> Coffee</li></del>
+            <li><strong>Task 2:</strong> Breakfast</li>
+           <li><strong>Task 3:</strong><del>Go to work</li></del>
+            <li><strong>Task 4:</strong>Spend time with colleagues</li>
+            <li><strong>Tas 5:</strong> to eat snacks</li>
+           <li><strong>Task 6:</strong><del>home</li></del>
+
+  <script>
+    // This function will add a task
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const taskText = input.value.trim();
+
+      if (taskText === "") {
+        alert("Please enter a task!");
+        return;
+      }
+
+      const li = document.createElement("li");
+      li.textContent = taskText;
+
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.onclick = function () {
+        li.remove();
+      };
+
+      li.appendChild(deleteBtn);
+      document.getElementById("taskList").appendChild(li);
+      input.value = ""; // Clear input
+    }
+
+    // Connect the button to the function
+    document.getElementById("addBtn").addEventListener("click", addTask);
+  </script>
+</body>
+</html>

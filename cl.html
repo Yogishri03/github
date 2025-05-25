@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call Letter</title>
+  <link rel="stylesheet" href="cl.css">
+</head>
+<body>
+  <div class="letter" id="callLetter">
+    <h1>Company Name</h1>
+     <p><strong>Date:</strong><span id="date"></span> </p>
+
+    <p><strong>To,</strong><br>
+      <span id="candidateName">[Candidate Name]</span><br>
+      [Candidate Address Line 1]<br>
+      [Candidate Address Line 2]
+    </p>
+
+    <p><strong>Subject:</strong> Interview Call Letter</p>
+
+    <p>Dear <span id="nameInline">[Candidate Name]</span>,</p>
+
+    <p>
+      We are pleased to inform you that you have been shortlisted for an interview with <strong>[Company Name]</strong>.
+      Please find the details below:
+    </p>
+
+    <ul>
+      <li><strong>Date:</strong> [Interview Date]</li>
+      <li><strong>Time:</strong> [Interview Time]</li>
+      <li><strong>Venue:</strong> [Company Address]</li>
+      <li><strong>Contact Person:</strong> [HR Name]</li>
+    </ul>
+
+    <p>
+      Please carry a copy of your resume, academic certificates, and ID proof.
+    </p>
+
+    <p>We look forward to meeting you.</p>
+
+    <p>Best regards,<br><strong>[HR Name]</strong><br>HR Department</p>
+  </div>
+
+  <button onclick="printLetter()">Print Letter</button>
+
+  <script src="cl.js"></script>
+</body>
+</html>
